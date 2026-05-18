@@ -24,7 +24,7 @@ export default function About() {
               <img
                 alt="Muhammad Fahad Professional"
                 className="w-full h-full object-cover rounded-[2.5rem] grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
-                src="/Muhammad-Fahad-Jamal-Cartoon.png"
+                src="/Muhammad-Fahad-jamal-Cartoon.png"
               />
               <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
             </div>
