@@ -44,23 +44,27 @@ export default function Hero() {
             Hey, I&apos;m
           </motion.span>
 
-          <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tighter leading-none">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white tracking-tighter leading-none flex flex-col gap-2">
             {["Muhammad Fahad", "Bin Jamal"].map((line, lineIndex) => (
-              <div key={lineIndex} className="overflow-hidden">
-                {line.split("").map((char, i) => (
-                  <motion.span
-                    key={i}
-                    initial={{ opacity: 0, y: 80, rotateX: -90 }}
-                    animate={{ opacity: 1, y: 0, rotateX: 0 }}
-                    transition={{
-                      duration: 0.8,
-                      delay: lineIndex * 0.4 + i * 0.05,
-                      ease: [0.215, 0.61, 0.355, 1],
-                    }}
-                    className="inline-block"
-                  >
-                    {char === " " ? "\u00A0" : char}
-                  </motion.span>
+              <div key={lineIndex} className="flex flex-wrap gap-x-3 sm:gap-x-4">
+                {line.split(" ").map((word, wordIndex) => (
+                  <div key={wordIndex} className="overflow-hidden pb-1 sm:pb-2">
+                    {word.split("").map((char, i) => (
+                      <motion.span
+                        key={i}
+                        initial={{ opacity: 0, y: 80, rotateX: -90 }}
+                        animate={{ opacity: 1, y: 0, rotateX: 0 }}
+                        transition={{
+                          duration: 0.8,
+                          delay: lineIndex * 0.4 + wordIndex * 0.1 + i * 0.05,
+                          ease: [0.215, 0.61, 0.355, 1],
+                        }}
+                        className="inline-block"
+                      >
+                        {char}
+                      </motion.span>
+                    ))}
+                  </div>
                 ))}
               </div>
             ))}
