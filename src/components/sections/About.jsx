@@ -54,7 +54,9 @@ export default function About() {
 
             <motion.a
               whileHover={{ x: 10 }}
-              href="#"
+              href="https://drive.google.com/file/d/1uEq2-HAK0WCo7j84RRfITBqb3-Sj5uU-/view?usp=drivesdk"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-4 px-10 py-5 bg-surface-container-highest text-white font-bold rounded-2xl hover:bg-surface-variant transition-all border border-white/5"
             >
               Download CV 📄
@@ -64,4 +66,5 @@ export default function About() {
       </div>
     </section>
   );
+
 }
